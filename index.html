@@ -15,7 +15,7 @@
     <!-- navbar-->
     <header>
       <a href="#" class="logo">
-        <img src="/assets/logoFooter.png" alt="" />
+        <img src="/assets/logoFooter.png" alt="" id="home" />
       </a>
       <!--menu-icon-->
       <i class="bx bx-menu" id="menu-icon"></i>
@@ -81,12 +81,22 @@
     <section class="products" id="products">
       <div class="heading">
         <h2>Nos produits</h2>
+        <div class="filter-produit">
+          <h3>Filter Produits </h3>
+        <ul class="ul">
+          <li class="current">All </li>
+          <li>Caffé Expresso</li>
+          <li>Caffé Filtre</li>
+          <li>Caffé Turc</li>
+          <li>Caffé Gamme sup</li>
+        </ul>
+         </div>
       </div>
 
       <!-- container -->
       <!-- caffee express -->
       <div class="products-container">
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Espresso-Pur-Gold-Label-250g-Pf.png"
             alt=""
@@ -99,7 +109,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Espresso-Pur-Napoletano-250g-Pf.png"
             alt=""
@@ -111,7 +121,7 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Pur-Grains-Etiquette-Noire-250g---Pf.png"
             alt=""
@@ -123,7 +133,7 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Pur-Grains-Etiquette-Noire-500g---Pf.png"
             alt=""
@@ -136,7 +146,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Pur-Grains-Etiquette-Or-250g---Pf.png"
             alt=""
@@ -149,7 +159,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/Café-Pur-Grains-Etiquette-Or-500g---Pf.png"
             alt=""
@@ -162,7 +172,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/expresso_sous_vide_noire_g.png"
             alt=""
@@ -175,7 +185,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/expresso_sous_vide_rouge_g.png"
             alt=""
@@ -188,7 +198,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Expresso">
           <img
             src="/assets/caffee express/sous_vide_etiquette_or_g.png"
             alt=""
@@ -200,11 +210,8 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-      </div>
-
       <!-- caffee filter -->
-      <div class="products-container">
-        <div class="box">
+        <div class="box" data-filter="Caffé Filtre">
           <img
             src="/assets/caffee filtre/Café-Filtre-Mélange-250g-Pf.png"
             alt=""
@@ -217,7 +224,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Filtre">
           <img
             src="/assets/caffee filtre/Café-Filtre-Pur-250g-Pf.png"
             alt=""
@@ -229,7 +236,7 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-filter="Caffé Filtre">
           <img
             src="/assets/caffee filtre/Café-Pur-Relax-250g-Pf.png"
             alt=""
@@ -241,11 +248,9 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-      </div>
 
       <!-- caffee turc-->
-      <div class="products-container">
-        <div class="box">
+        <div class="box" data-filter="Caffé Turc">
           <img
             src="/assets/caffe turc/Café-Turc-Mélange-125g-Pf.png"
             alt=""
@@ -258,7 +263,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Turc">
           <img
             src="/assets/caffe turc/Café-Turc-Pur-125g---Pf.png"
             alt=""
@@ -270,7 +275,7 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-filter="Caffé Turc">
           <img
             src="/assets/caffe turc/Café-Turc-Pur-250g-Pf.png"
             alt=""
@@ -282,11 +287,8 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-      </div>
-
       <!-- caffee gamme-->
-      <div class="products-container">
-        <div class="box">
+        <div class="box" data-filter="Caffé Gamme sup">
           <img
             src="/assets/caffe pure gamme/cafe_deca_g.png"
             alt=""
@@ -299,7 +301,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Gamme sup">
           <img
             src="/assets/caffe pure gamme/charme_d_orient_g.png"
             alt=""
@@ -311,7 +313,7 @@
             <a href="#">Add to cart</a>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-filter="Caffé Gamme sup">
           <img
             src="/assets/caffe pure gamme/pur_arabica_g.png"
             alt=""
@@ -324,7 +326,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-filter="Caffé Gamme sup">
           <img src="/assets/caffe pure gamme/suprema_g.png" alt="" srcset="" />
           <h3>Superma</h3>
           <div class="content">
@@ -335,7 +337,7 @@
       </div>
     </section>
 
-    <section class="footer">
+    <section class="footer" id="cantact">
         <div class="footer-box">
             <img src="/assets/logo3.png" alt="Logo" />
     
