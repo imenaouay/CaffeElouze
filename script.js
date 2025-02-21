@@ -33,6 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add('visible');
       }
     });
+
+    // Check if product boxes are in view and add visible class
+    productBoxes.forEach((box) => {
+      const rect = box.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        box.classList.add("visible");
+      }
+    });
   });
 
   // Filter products
@@ -49,11 +57,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initial check for elements already in view
+  // Initial check for elements already in view (fade and product boxes)
   fadeElements.forEach((el) => {
     const rect = el.getBoundingClientRect();
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
       el.classList.add('visible');
+    }
+  });
+
+  productBoxes.forEach((box) => {
+    const rect = box.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      box.classList.add("visible");
     }
   });
 });
