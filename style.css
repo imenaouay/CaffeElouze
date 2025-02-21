@@ -221,6 +221,7 @@ html {
     margin-top:2rem;
    
 }
+
 .products-container .box{
     position:relative;
     padding: 10px;
@@ -230,6 +231,14 @@ html {
     border-radius:0.5rem;
     box-shadow: var(--box-shadow);
     background-color: #0f0603;
+     opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.products-container .box.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .products-container img{
     width: 100%;
