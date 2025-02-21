@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const filterItems = document.querySelectorAll(".filter-produit ul li");
   const productBoxes = document.querySelectorAll(".products-container .box");
+  const fadeElements = document.querySelectorAll('.fade-on-scroll');
 
   // Toggle search box
   searchIcon.addEventListener("click", () => {
@@ -19,11 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     searchBox.classList.remove("active");
   });
 
-  // Remove active classes on scroll
+  // Remove active classes on scroll and add shadow to header
   window.addEventListener("scroll", () => {
     navbar.classList.remove("active");
     searchBox.classList.remove("active");
     header.classList.toggle("shadow", window.scrollY > 0);
+
+    // Add fade effect on scroll for elements
+    fadeElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        el.classList.add('visible');
+      }
+    });
   });
 
   // Filter products
@@ -38,5 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
         box.style.display = filterValue === "All" || filterCategory === filterValue ? "block" : "none";
       });
     });
+  });
+
+  // Initial check for elements already in view
+  fadeElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      el.classList.add('visible');
+    }
   });
 });
